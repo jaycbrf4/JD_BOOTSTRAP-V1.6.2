@@ -1,0 +1,475 @@
+
+/*
+Theme Name: JD_BOOTSTRAP
+Theme URI: http://HudsonValleyWebDesign.net
+Description: Responsive WordPress Theme built with Bootstrap, Animate.css, Nivo Lightbox, WoW.js
+Author: Jay Deutsch @jaycbrf4
+Version: 1.6
+Tags: COMPLETELY CUSTOM BUILD, two-columns, four-columns, six-columns, eight-columns, ten-columns, twelve-columns, Twitter Bootstrap, FontAwesome, Glyphicons left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, Lightbox, featured-images, post-formats
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+
+
+/******************************************************************
+   |  |  |                  SITE COLORS                  |  |  |
+*******************************************************************
+Gray  -     #aea6a6         174,166,166
+
+Lt. Gray - #eee               238, 238, 238
+
+Blue -      #00b0f0           0, 176, 240
+
+RED:      #f00038           240, 0, 63
+
+GREEN   #5cb85c         92, 184, 92
+*/
+
+/* define css variables for color */
+:root {
+	--main-gray: #aea6a6;
+  --main-ltgray: #eee;
+  --main-blue: #00b0f0;
+  --main-red: #f00038;
+  --main-green: #5cb85c;
+}
+
+/*  Boostrap default classes 
+
+.primary:  #337ab7;
+.success: #5cb85c;
+.info:    #5bc0de;
+.warning: #f0ad4e;
+.danger:  #d9534f;
+
+*******************************************************************/
+
+
+/*  GOOGLE FONTS */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,400italic,700,700italic);
+
+/****************************************************************************************/
+
+/************************************************************************************
+BASE STYLES
+*************************************************************************************/
+*, *:active, *:focus, *:visited {
+    outline: 0;
+    outline:none;
+    -moz-outline-style: none;
+}
+a, a:active, a:focus, 
+button, button:focus, button:active, 
+.btn, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn.focus:active, .btn.active.focus {
+    outline: none;
+    outline: 0;
+}
+
+input::-moz-focus-inner {
+    border: 0;
+}
+a {
+  transition:color .2s linear;
+  color: var(--main-blue);  /* call variable */
+  text-decoration: none;
+}
+a:visited {
+  color:  #00b0f0;
+  text-decoration: none !important;
+      background: none;
+}
+a:hover {
+  color: #666;
+  text-decoration: none !important;
+}
+a:focus {
+  text-decoration: none !important;
+}
+a:active {
+  color: #fff;
+  text-decoration: none;
+  outline: none;
+    -moz-outline-style: none;
+}
+li.current a {
+    font-weight: 700;
+}
+html {
+  min-width: 320px !important;
+} 
+/* box shadow on top of page */
+.navbar:before { 
+  content: "";
+  position: fixed;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  z-index: 100;
+  -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.6);
+  -moz-box-shadow: 0px 0px 10px rgba(0,0,0,.6);
+  box-shadow: 0px 0px 10px rgba(0,0,0,.6);
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Open Sans';
+  line-height: 26px;
+  padding-bottom: 0;
+  }
+.no-pad {padding: 0;}
+.clear {clear: both;}
+hr{ width:80%; border: 0; height: 1px; background: #a7a7a7; background-image: -webkit-linear-gradient(left, #ccc, #a7a7a7, #ccc); background-image: -moz-linear-gradient(left, #ccc, #a7a7a7, #ccc); background-image: -ms-linear-gradient(left, #ccc, #a7a7a7, #ccc); background-image: -o-linear-gradient(left, #ccc, #a7a7a7, #ccc); }
+
+.logo {
+    margin-top: 3px;
+}
+.centered {
+  margin: 0 auto;
+} 
+
+#content {
+    margin-top: 63px;
+}
+
+
+
+/********** NAV ***********/
+
+
+.navbar-brand {max-width: 100%;padding: 0;}
+.navbar-nav {float: right;margin: 20px 0 0; z-index: 1000;}
+.navbar-inverse .navbar-nav > li > a {color: #fff; letter-spacing: 2px; text-transform:uppercase; padding-left: 7px;}
+.navbar-nav > li > a {padding-bottom: 15px;padding-top: 8px; font-family: 'Open Sans'; font-weight: 700; font-size: 14px;}
+.navbar-nav > li > a {border-right: 1px solid #ccc; margin-left: 10px;}
+.navbar-nav > li:last-child > a {border-right:none;} 
+.navbar-inverse .navbar-nav > li > a:hover {color: #00b0f0;}
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {color: #666;}
+.navbar.navbar-inverse.navbar-fixed-top {
+  background: #333;
+  border: medium none;
+  height: 63px;
+  }
+  .navbar-inverse .navbar-toggle {
+    border-color: #666;
+}
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  color: #00b0f0;
+  background-color: #fff;
+  }
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    background-color: transparent;
+    border-color: #fff;
+    color: #fff;
+}
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: transparent;
+    border: none;
+}
+.navbar-collapse {
+    border-top: none;
+    box-shadow: none;
+}
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+  background: #00b0f0;
+}
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    background-color: transparent;
+    color: #00b0f0;
+}
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+/* -=-=-=-=-=- DROPDOWNS -=-=-=-=-=-=- */
+
+.dropdown-menu > li > a {
+     padding: 8px 20px;
+  }
+
+.dropdown-menu > li:hover {
+    background: #00b0f0;
+}
+
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+    background-color: #5cb85c;
+    color: #fff;
+    outline: 0 none;
+    text-decoration: none;
+}
+
+
+/**** Navbar animation */
+ .navbar-fixed-top {
+    left: 0;
+    position: fixed;
+    right: 0;
+    z-index: 998;
+    top: 0;
+    transition: all .5s ease;
+}
+.navbar-fixed-top.scrolled {
+    top: -31px;
+         box-shadow: 0 8px 6px -6px #999;
+}
+#logo img {
+  max-width:350px;
+  padding-top: 0;
+  transition: all .5s ease;
+}
+.navbar-fixed-top.scrolled #logo img {
+    max-width: 250px;
+    padding-top: 13px;
+}
+
+/*            Hanburger Animation -------------
+----------------------------------------------*/
+.navbar-toggle .icon-bar:nth-of-type(2) {
+    top: 1px;
+}
+
+.navbar-toggle .icon-bar:nth-of-type(3) {
+    top: 2px;
+}
+
+.navbar-toggle .icon-bar {
+    position: relative;
+    transition: all 500ms ease-in-out;
+}
+
+.navbar-toggle.active .icon-bar:nth-of-type(1) {
+    top: 6px;
+    transform: rotate(45deg);
+}
+
+.navbar-toggle.active .icon-bar:nth-of-type(2) {
+    background-color: transparent;
+}
+
+.navbar-toggle.active .icon-bar:nth-of-type(3) {
+    top: -6px;
+    transform: rotate(-45deg);
+}
+
+/*^^^^^^^^^^^^^^^^^^^^^^^^ Main Styles ^^^^^^^^^^^^^^^^^^^^*/
+
+
+
+/***************** 
+
+OPTIONAL  Home Page with Hero
+ 
+***************/
+
+.cover-wrapper-inner{
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: all 0.5s ease 0s;
+    z-index: 998;
+}
+
+/*
+ * Cover
+ */
+.cover {
+  padding: 0 20px;
+}
+.cover .btn-lg {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+  /* Start the vertical centering */
+  .cover-wrapper-inner {
+    vertical-align: middle;
+    max-height: 767px;
+  }
+.cover-heading {
+  font-size: 72px;
+  color: #fff;
+  font-weight: 800;
+}
+.cover-container,
+.cover-container:after {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+}
+.cover-container {
+  overflow: hidden;
+  max-height: 767px;
+  position:relative;
+}
+.cover-container img {
+  min-width: 100%;
+  z-index: 1;
+      -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+  animation: kenBurns 30s linear infinite;
+}
+#hero-content {
+  margin-top: 15vw;
+}
+
+.hero-image {
+    height: 400px;
+    position: relative;
+    top: -90px;
+    margin-bottom: -90px;
+}
+.hero-image h1 {
+  margin-top: 170px;
+}
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+
+  /* Start the vertical centering */
+  .cover-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .cover-container {
+    min-width: 100% !important; /* Must be percentage or pixels for horizontal alignment */
+    height: auto;
+    }
+
+@media (max-width: 766px) {
+    .cover-container img {
+      animation: none;
+      width: 100% !important;
+      }
+    .cover-heading {
+      font-size: 6vw;
+      }
+    #hero-content {
+      margin-top: 21vw;
+    }
+}
+
+/* --------------
+ Animation for hero image
+ ----------------*/
+ @keyframes kenBurns {
+    0% {
+      opacity: 0;
+    }
+    5% {
+      opacity: 1;
+    }
+  55% {
+        transform: scale3d(1.5, 1.5, 1.5) translate3d(-190px, -120px, 0px);
+        animation-timing-function: ease-in;
+        opacity: 1;
+    }
+    95% {
+        transform: scale3d(1.75, 1.75, 1.75) translate3d(-190px, -120px, 0px);
+        animation-timing-function: ease-in;
+        opacity: 1;
+    }
+    100% {
+        transform: scale3d(2, 2, 2) translate3d(-170px, -100px, 0px);
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+}
+/*                  ------------------------- End of optional Animated Home Page Hero Image Styles ------------------------------------ */
+
+
+
+
+
+@media (min-width: 767px) {
+    /** 
+    make dropdown active on hover and fade in - 
+    change to 992px for alt breakpoint and swap bootstrap.css files 
+    **/
+
+    ul.nav li.dropdown > ul.dropdown-menu{
+    visibility:hidden;
+    display:block;
+    opacity:0;
+    margin-top: 10px; /*  adds animated slide up */
+    transition: opacity 0.5s ease-in-out;
+    }
+    ul.nav li.dropdown:hover > ul.dropdown-menu{
+    visibility:visible;
+    opacity: 1;
+    display: block;
+    margin-top: 0; /*  adds animated slide up */
+    background: #fff;
+    border-bottom-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+    }
+  .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    background-color: transparent;
+    border-color: #fff;
+    color: #00b0f0;
+}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    background-color:transparent;
+    color: #666;
+    text-decoration: none;
+}
+}
+
+@media (max-width: 991px) {    }
+
+
+
+
+    /* Mobile */
+@media (max-width: 539px) {  }
+
+  @media (max-width: 369px) {    }
+
+   @media  (max-width: 492px) { }
+
+@media  (max-width: 479px) {  }
+
+/*Small screen */
+@media (min-width: 480px) and (max-width: 658px) { }
+                  
+    /* Smartphones to Tablets */
+@media (min-width: 659px) and (max-width: 767px) {}
+
+    /* Tablets */
+@media (min-width: 768px) and (max-width: 991px) { }
+    
+
+    /* Large Display */
+@media (min-width: 992px) and (max-width:1199px) { }
+
+
+
+.scrollup{
+  position:fixed;
+  bottom: 30px;
+  right: 30px;
+  display:none;
+  color: #666;
+  opacity: .80;
+  z-index: 1000;
+}
+.scrollup:before {
+  content: "\f0aa";
+  font-family: 'FontAwesome';
+  font-size:36px;
+}
+.scrollup:hover {
+  opacity: 1;
+  color:#1e1f50;
+  cursor: pointer;
+}
