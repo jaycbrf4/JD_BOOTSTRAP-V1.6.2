@@ -1,7 +1,7 @@
 === JD-Bootstrap ===
 Contributors: JayDeutsch @jaycbrf4
 Tags: Completely Custom Built, two-columns, four-columns, six-columns, eight-columns, ten-columns, twelve-columns, Twitter Bootstrap, FontAwesome, Glyphicons left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, lightbox, featured-images, SEO
-Tested up to: 4.7.2
+Tested up to: 4.7.3
 Version 1.6.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -64,6 +64,7 @@ To disable full-page hero delete front-page.php and related css
     =added alt bootstrap.css for responsive menu @ 991px
     =added optional full page animated hero
 =v1.6.1
-    = update Boostrap nav for WP 4.7.2
+    = update Boostrap nav for WP 4.7.3
     = added support for Theme Customizer custom colors and custom css
+    =upgrade FontAwesome to 4.7.0
 
