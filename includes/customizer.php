@@ -233,7 +233,7 @@ function wp_register_settings()
     // Add settings section
     add_settings_section( 
                               'wp_text_section', 
-                              '<img src="../wp-content/themes/JD_BOOTSTRAP/images/analytics.png"> <br><br><span class="dashicons-before dashicons-chart-area"></span> Google Analytics Tracking ID', 
+                              '<img  src="<?php echo get_stylesheet_directory_uri(); ?>/images/analytics.png" alt="Google Analytics"> <br><br><span class="dashicons-before dashicons-chart-area"></span> Google Analytics Tracking ID', 
                               'wp_display_section', 
                               'GA_options.php' 
           );
