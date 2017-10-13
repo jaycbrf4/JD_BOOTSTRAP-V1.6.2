@@ -4,7 +4,7 @@
 * Template Name: Static Front Page
 *
 * This template is for a one page scrolling site. - rename to front-page.php and create pages
-* Make sure to change page names in loop to match pages in backend.
+* Make sure to change page slug in loop to match pages in backend.
 */
 ?>
 
@@ -21,7 +21,7 @@
                     <div class="row">
                       <div class="col-xs-12">
                         <?php
-                          $query = new WP_query ('pagename=page-1'); // page name adds pages to loop
+                          $query = new WP_query ('pagename=home-page'); // page slug adds pages to loop
                             // The LooP
                             if ( $query->have_posts() ) {
                             while ( $query->have_posts() ) {
@@ -70,3 +70,7 @@
           </div><!--/container-->
         </div><!-- /. content -->
 <?php get_footer(); ?>
+
+
+
+                
