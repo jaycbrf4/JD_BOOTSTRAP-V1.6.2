@@ -1,7 +1,7 @@
 === JD-Bootstrap ===
 Contributors: JayDeutsch @jaycbrf4
 Tags: Completely Custom Built, Responsive, Bootstrap, FontAwesome, Nivo-Lightbox, Animate.css, Wow.js
-Tested up to: 4.8.2
+Tested up to: 4.9
 Version 1.6.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -68,4 +68,7 @@ To change breakpoint for hamburger menu swap Bootstrap.css files
 =v.1.6.2
     = added server-side validation to contact form
     = added Bootstrap error classes to invalid fields on contact form
+    = added support for WordPress 4.9
+
+    coming soon Bootstrap 4
 
