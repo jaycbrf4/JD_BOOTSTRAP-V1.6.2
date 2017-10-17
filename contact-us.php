@@ -1,5 +1,8 @@
 <?php
 /* Template Name: Contact-Page
+*
+* A Custom PHP Contact us page. Add or change form fields on line 28 and in the form itself.
+* Jquery is used to add/remove Bootstrap has-error class to invalid fields.
 */
  
 // New Line Tag
@@ -65,17 +68,27 @@ if(!empty($failedFields))
 	$failureMessage = "The following fields are required: " . implode(', ', $failedFields);
 	my_contact_form_generate_response("error", $failureMessage);
 }
+// Create HTML message
+$message  = '<html><head>';
+// define the Google Font used in the message
+$message .='<style>@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600");</style>';
+$message .='</head>';
+$message .='<body style="font-family:Open Sans, sans-serif; font-weight:400;">';
+$message .= "<h3>Message from contact form on" .get_bloginfo('name') ."</h3>";
+$message .= '<table rules="all" style="border-color: #666;" cellpadding="10">';
 
-$message = 'Contact from' . $nL . $nL;
-
-// If we have valid fields listed above, we will concatenate a message for the email body
+// If we have valid fields listed above, we will concatenate a message for the email body then close the table, body, and html tags
 if(!empty($validFields))
 {
-	foreach($validFields as $title => $value)
-	{
-		$message .= '<strong>'.$title . '</strong>: ' . $value . $nL;
-	}
+  foreach($validFields as $title => $value)
+  {
+    $message .= "<tr style='background: #eee;'><td style='width:200px; font-family: Open Sans, sans-serif; margin: 0px; padding:8px; font-weight: 600;'>" . $title . ":</td><td style='font-family: Open Sans, sans-serif; margin: 0px; padding:8px; font-weight: 400;'>" . $value . "</td></tr>";
+  }
 }
+$message .= '</table></body></html>';
+
+// end message
+
 
 /**
  * Get Error Class
