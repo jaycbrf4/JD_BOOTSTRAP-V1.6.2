@@ -46,7 +46,6 @@
           <?php $args = array(
             'theme_location' => 'primary',
             'depth'      => 0,
-            'container'  => 'ul',
             'menu_class' => 'nav navbar-nav',
             'walker'     => new BootstrapNavMenuWalker()
             );
