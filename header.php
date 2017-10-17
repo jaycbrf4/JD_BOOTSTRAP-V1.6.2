@@ -48,7 +48,6 @@
             'depth'      => 0,
             'container'  => 'ul',
             'menu_class' => 'nav navbar-nav',
-            'menu_id'    => 'menu-',
             'walker'     => new BootstrapNavMenuWalker()
             );
             wp_nav_menu($args);
