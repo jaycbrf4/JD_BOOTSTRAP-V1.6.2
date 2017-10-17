@@ -1,7 +1,7 @@
 === JD-Bootstrap ===
 Contributors: JayDeutsch @jaycbrf4
 Tags: Completely Custom Built, Responsive, Bootstrap, FontAwesome, Nivo-Lightbox, Animate.css, Wow.js
-Tested up to: 4.9
+Tested up to: 4.9b2
 Version 1.6.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
