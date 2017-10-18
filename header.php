@@ -42,15 +42,16 @@
 
         </div><!-- /. navbar-header -->
         <!-- Collect the nav links from WordPress -->
-        <div class="collapse navbar-collapse" id="jd-bootstrap-nav-collapse">         
+        <div id="jd-bootstrap-nav-collapse" class="collapse navbar-collapse">         
           <?php $args = array(
-            'theme_location' => 'primary',
-            'depth'      => 0,
-            'menu_class' => 'nav navbar-nav',
-            'walker'     => new BootstrapNavMenuWalker()
-            );
-            wp_nav_menu($args);
-          ?>
+              'theme_location' => 'primary',
+              'depth' => 0,
+              'container' => '',
+              'menu_class'  => 'nav navbar-nav',
+              'walker'  => new BootstrapNavMenuWalker()
+              );
+              wp_nav_menu($args);
+            ?>
         </div><!-- ./collapse -->
       </div><!-- /.container -->
     </nav>
