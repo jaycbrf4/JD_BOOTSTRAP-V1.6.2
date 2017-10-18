@@ -46,10 +46,11 @@
 
           </div><!-- /. navbar-header -->
           <!-- Collect the nav links from WordPress -->
-          <div class="collapse navbar-collapse" id="jd-bootstrap-nav-collapse">         
-      		  <?php $args = array(
+          <div id="jd-bootstrap-nav-collapse" class="collapse navbar-collapse">         
+            <?php $args = array(
               'theme_location' => 'primary',
               'depth' => 0,
+              'container' => '',
               'menu_class'  => 'nav navbar-nav',
               'walker'  => new BootstrapNavMenuWalker()
               );
