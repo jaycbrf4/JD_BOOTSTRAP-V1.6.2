@@ -128,6 +128,16 @@ function JD_BOOTSTRAP_scripts_styles() {
 }
 add_action('wp_enqueue_scripts', 'JD_BOOTSTRAP_scripts_styles');
 
+// Update WordPress' version of jQuery to v.2
+function modify_jquery_version() {
+    if (!is_admin()) {
+        wp_deregister_script('jquery');
+        wp_register_script('jquery','https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js', false, '2.2.4');
+        wp_enqueue_script('jquery');
+    }
+}
+add_action('init', 'modify_jquery_version');
+
 
 // Initialize Wordpress Menu
 register_nav_menus( array(
