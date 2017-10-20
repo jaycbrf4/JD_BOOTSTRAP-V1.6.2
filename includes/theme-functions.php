@@ -172,6 +172,12 @@ function woocommerce_support() {
     add_theme_support( 'woocommerce' );
 }
 
+add_filter('woocommerce_form_field_args', function ($args, $key, $value) {
+    $args['input_class'][] = 'form-control';
+    $args['class'][] = 'form-group';
+    return $args;
+}, 10, 3);
+
 /*
 *
 ** Bootstrap Responsive Images *
