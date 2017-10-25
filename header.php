@@ -37,7 +37,7 @@
             <span class="icon-bar"></span>
           </button>
           <!-- custom calls to options stored in Admin section "Theme Options" to display the logo or not -->
-           <a class="navbar-brand" id="logo" href="<?php echo site_url(); ?>"><img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" class="img-responsive logo"/></a>
+           <a class="navbar-brand" id="logo" href="<?php echo site_url(); ?>"><img src="<?php header_image(); ?>" alt="Our Logo" class="img-responsive logo"/></a>
           <!-- custom calls to options stored in Admin section "Theme Options" to display the logo or not -->
 
         </div><!-- /. navbar-header -->
