@@ -92,9 +92,9 @@ add_filter('the_title', 'highlight_search_term');
 
   /* custom functions for log-in screen */
     function custom_login_css() {
-echo '<link rel="stylesheet" type="text/css" href="'.get_stylesheet_directory_uri().'/login/style.css" />';
-}
-add_action('login_head', 'custom_login_css');
+      wp_enqueue_style('jd_bootstrap_custom_login_styles', get_stylesheet_directory_uri().'/login/style.css');
+    }
+    add_action('login_enqueue_scripts', 'custom_login_css');
 
 function my_login_logo_url() {
 return get_bloginfo( 'url' );
