@@ -80,7 +80,7 @@ function JD_BOOTSTRAP_scripts_styles() {
         // Loads WoW JavaScript file.
   wp_enqueue_script('WoWjs', get_template_directory_uri() . '/library/js/wow.js', array('jquery'),'', true );
   // Loads NivoLightbox JavaScript file.
-  wp_enqueue_script('nivolightobx', get_template_directory_uri() . '/library/nivolightbox/nivo-lightbox.min.js', array('jquery'),'1.2.0', true );
+  wp_enqueue_script('nivolightbox', get_template_directory_uri() . '/library/nivolightbox/nivo-lightbox.min.js', array('jquery'),'1.2.0', true );
    // Loads Fancybox JavaScript file.
    wp_enqueue_script('fancyboxjs', get_template_directory_uri() . '/library/js/jquery.fancybox.min.js', array('jquery'),'3.0.47', true );
    // Loads Classie JavaScript file.
